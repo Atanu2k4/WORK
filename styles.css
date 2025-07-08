@@ -135,6 +135,26 @@
   letter-spacing: -2px;
 }
 
+nav {
+  position: absolute;
+  /* background: red; */
+  width: 100%;
+  z-index: 10;
+  padding: 30px 50px;
+}
+
+nav svg {
+  height: 16px;
+}
+
+nav svg path {
+  fill: #000;
+}
+
+.main{
+  background: #000;
+}
+
 .page1 {
   height: 100vh;
   width: 100%;
