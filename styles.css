@@ -151,9 +151,9 @@ nav svg path {
   fill: #000;
 }
 
-.main{
+/* .main{
   background: #000;
-}
+} */
 
 .page1 {
   height: 100vh;
@@ -176,6 +176,83 @@ nav svg path {
   height: 100vh;
   width: 100%;
   background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.elem {
+  /* background: red; */
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.elem h2 {
+  font-size: 8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  line-height: 0.8;
+}
+
+.elem .moving {
+  width: 100%;
+  white-space: nowrap;
+  padding: 10px 0;
+  background: #f5e41b;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -45%) scaleY(0);
+  /* overflow: hidden; */
+  transition: all 0.3s ease;
+}
+
+.elem .moving .moving-in {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: moving;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5 {
+  font-size: 1.15rem;
+  color: black;
+  display: inline-block;
+  font-family: gilroy;
+  text-transform: uppercase;
+  margin-right: 25px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 0.18s;
+}
+
+.elem:hover .moving {
+  transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving .moving-in h5{
+  opacity: 1;
+}
+
+.elem:hover h2{
+  color: black;
+  font-style: italic;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .page3 {
